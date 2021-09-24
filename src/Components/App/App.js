@@ -40,12 +40,14 @@ class App extends React.Component {
           name: "Jesus At The Center",
           artist: "Darlene Zschech",
           album: "Revealing Jesus",
-          id: "test4"
+          id: "test4",
+          uri: [],
         }, ]
     }
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack = this.removeTrack.bind(this);
     this.updatePlaylistName = this.updatePlaylistName.bind(this);
+    this.savePlaylist = this.savePlaylist.bind(this);
   }
 
   addTrack(track){
@@ -64,6 +66,12 @@ class App extends React.Component {
     this.setState({playlistName: name})
   }
 
+  savePlaylist(){
+    const trackURIs = this.state.playlistTracks.map(track => track.uri);
+    console.log(trackURIs)
+    return trackURIs;
+  }
+
   render(){
     return (
       <div>
@@ -72,7 +80,7 @@ class App extends React.Component {
           <SearchBar />
           <div className="App-playlist">
             <SearchResults tracks={this.state.searchResults} onAdd={this.addTrack}/>
-            <Playlist name={this.state.playlistName} tracks={this.state.playlistTracks} onRemove={this.removeTrack} onNameChange={this.updatePlaylistName}/>
+            <Playlist name={this.state.playlistName} tracks={this.state.playlistTracks} onRemove={this.removeTrack} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist}/>
           </div>
         </div>
       </div>

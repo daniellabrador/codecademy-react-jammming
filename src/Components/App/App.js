@@ -37,14 +37,14 @@ class App extends React.Component {
       playlistName: "Spotify Playlist",
       playlistTracks: [
         {
-          name: "The Night We Met",
-          artist: "Lord Huron",
-          album: "Strange Tails",
-          id: "test3"
-        }, 
-      ]
+          name: "Jesus At The Center",
+          artist: "Darlene Zschech",
+          album: "Revealing Jesus",
+          id: "test4"
+        }, ]
     }
     this.addTrack = this.addTrack.bind(this);
+    this.removeTrack = this.removeTrack.bind(this);
   }
 
   addTrack(track){
@@ -52,6 +52,11 @@ class App extends React.Component {
      return; 
     }
     this.setState({playlistTracks: [...this.state.playlistTracks, track]})
+  }
+
+  removeTrack(track){
+    this.setState({playlistTracks: this.state.playlistTracks.filter(playlistTrack =>
+      playlistTrack.id !== track.id)})
   }
 
   render(){
@@ -62,7 +67,7 @@ class App extends React.Component {
           <SearchBar />
           <div className="App-playlist">
             <SearchResults tracks={this.state.searchResults} onAdd={this.addTrack}/>
-            <Playlist name={this.state.playlistName} tracks={this.state.playlistTracks}/>
+            <Playlist name={this.state.playlistName} tracks={this.state.playlistTracks} onRemove={this.removeTrack}/>
           </div>
         </div>
       </div>

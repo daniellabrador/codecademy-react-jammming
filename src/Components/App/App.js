@@ -27,21 +27,15 @@ class App extends React.Component {
           album: "Strange Tails",
           id: "test3"
         }, 
+        {
+          name: "Jesus At The Center",
+          artist: "Darlene Zschech",
+          album: "Revealing Jesus",
+          id: "test4"
+        }, 
       ],
       playlistName: "Spotify Playlist",
       playlistTracks: [
-        {
-          name: "bad guy",
-          artist: "Billie Eilish",
-          album: "When We All Fall Asleep, Where Do We Go?",
-          id: "test1"
-        }, 
-        {
-          name: "What A Beautiful Name",
-          artist: "Hillsong Worship",
-          album: "Let There Be Light",
-          id: "test2"
-        }, 
         {
           name: "The Night We Met",
           artist: "Lord Huron",
@@ -50,7 +44,16 @@ class App extends React.Component {
         }, 
       ]
     }
+    this.addTrack = this.addTrack.bind(this);
   }
+
+  addTrack(track){
+    if (this.state.playlistTracks.find(playlistTrack => playlistTrack.id === track.id)){
+     return; 
+    }
+    this.setState({playlistTracks: [...this.state.playlistTracks, track]})
+  }
+
   render(){
     return (
       <div>
@@ -58,7 +61,7 @@ class App extends React.Component {
         <div className="App">
           <SearchBar />
           <div className="App-playlist">
-            <SearchResults tracks={this.state.searchResults}/>
+            <SearchResults tracks={this.state.searchResults} onAdd={this.addTrack}/>
             <Playlist name={this.state.playlistName} tracks={this.state.playlistTracks}/>
           </div>
         </div>

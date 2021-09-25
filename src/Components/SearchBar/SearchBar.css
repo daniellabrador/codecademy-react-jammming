@@ -6,7 +6,7 @@
   margin-bottom: 6.33rem;
 }
 
-.SearchBar input {
+.SearchBar #SearchBar {
   width: 287px;
   padding: .88rem 0;
   border: 1px solid #fff;
@@ -17,8 +17,12 @@
   font-size: 1rem;
 }
 
-.SearchBar input:focus {
+.SearchBar #SearchBar:focus {
   outline: none;
+}
+
+.SearchBar #SearchBar:focus::placeholder {
+  color: transparent;
 }
 
 .SearchButton {

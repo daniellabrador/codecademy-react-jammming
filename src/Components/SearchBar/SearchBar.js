@@ -16,13 +16,11 @@ export class SearchBar extends React.Component {
   handleTermChangeClick(){
     const term = document.getElementById('SearchBar').value;
     this.search(term);
-    document.getElementById('SearchBar').value = "";
   }
 
   handleTermChangeEnter(e){    
     if (e.key === 'Enter'){
       document.getElementById('SearchButton').click();
-      document.getElementById('SearchBar').value = "";
     }
     
   }

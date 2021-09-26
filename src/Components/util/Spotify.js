@@ -1,6 +1,7 @@
 export const Spotify = {
   _accessToken: null,
   _expiresIn: null,
+  _userId: null,
 
   getAccessToken(){
     if (this._accessToken){
@@ -55,5 +56,45 @@ export const Spotify = {
     }
 
   },
+
+  async savePlaylist(name, uriArr) {
+    if (!name || !uriArr) return;
+    let headersObj = {Authorization: `Bearer ${this.getAccessToken()}`}
+
+    try {
+      const response = await fetch('https://api.spotify.com/v1/me', {
+        headers: headersObj
+      })
+
+      if (!response.ok) throw new Error('User ID request failed.');
+
+      const json = await response.json();
+      this._userId = json.id;
+
+      const createPlaylistResponse = await fetch(`https://api.spotify.com/v1/users/${this._userId}/playlists`, {
+        method: 'POST',
+        headers: headersObj, 
+        body: JSON.stringify({name: name})
+      })
+
+      if (!createPlaylistResponse.ok) throw new Error('Playlist creation request failed.');
+
+      const playlistJson = await createPlaylistResponse.json();
+      const playlistId = await playlistJson.id;
+
+      await fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
+        method: 'POST',
+        headers: headersObj, 
+        body: JSON.stringify({uris: uriArr})
+      })
+
+      
+      
+    } catch (e){
+      console.log(e)
+    } 
+
+  },
+
 }
 

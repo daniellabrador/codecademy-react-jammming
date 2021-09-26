@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/codecademy-react-jammming/static/css/main.3e88dddc.chunk.css",
-    "main.js": "/codecademy-react-jammming/static/js/main.2d83232d.chunk.js",
-    "main.js.map": "/codecademy-react-jammming/static/js/main.2d83232d.chunk.js.map",
+    "main.css": "/codecademy-react-jammming/static/css/main.55443a2f.chunk.css",
+    "main.js": "/codecademy-react-jammming/static/js/main.8dccd2cc.chunk.js",
+    "main.js.map": "/codecademy-react-jammming/static/js/main.8dccd2cc.chunk.js.map",
     "runtime-main.js": "/codecademy-react-jammming/static/js/runtime-main.2279219a.js",
     "runtime-main.js.map": "/codecademy-react-jammming/static/js/runtime-main.2279219a.js.map",
     "static/js/2.f2966cca.chunk.js": "/codecademy-react-jammming/static/js/2.f2966cca.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.cf5ea85d.chunk.js": "/codecademy-react-jammming/static/js/3.cf5ea85d.chunk.js",
     "static/js/3.cf5ea85d.chunk.js.map": "/codecademy-react-jammming/static/js/3.cf5ea85d.chunk.js.map",
     "index.html": "/codecademy-react-jammming/index.html",
-    "static/css/main.3e88dddc.chunk.css.map": "/codecademy-react-jammming/static/css/main.3e88dddc.chunk.css.map",
+    "static/css/main.55443a2f.chunk.css.map": "/codecademy-react-jammming/static/css/main.55443a2f.chunk.css.map",
     "static/js/2.f2966cca.chunk.js.LICENSE.txt": "/codecademy-react-jammming/static/js/2.f2966cca.chunk.js.LICENSE.txt",
     "static/media/App.css": "/codecademy-react-jammming/static/media/background_photo_desktop.a0687f3f.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2279219a.js",
     "static/js/2.f2966cca.chunk.js",
-    "static/css/main.3e88dddc.chunk.css",
-    "static/js/main.2d83232d.chunk.js"
+    "static/css/main.55443a2f.chunk.css",
+    "static/js/main.8dccd2cc.chunk.js"
   ]
 }

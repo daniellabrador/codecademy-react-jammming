@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/codecademy-react-jammming/static/css/main.55443a2f.chunk.css",
-    "main.js": "/codecademy-react-jammming/static/js/main.8dccd2cc.chunk.js",
-    "main.js.map": "/codecademy-react-jammming/static/js/main.8dccd2cc.chunk.js.map",
+    "main.js": "/codecademy-react-jammming/static/js/main.9cf4f244.chunk.js",
+    "main.js.map": "/codecademy-react-jammming/static/js/main.9cf4f244.chunk.js.map",
     "runtime-main.js": "/codecademy-react-jammming/static/js/runtime-main.2279219a.js",
     "runtime-main.js.map": "/codecademy-react-jammming/static/js/runtime-main.2279219a.js.map",
     "static/js/2.f2966cca.chunk.js": "/codecademy-react-jammming/static/js/2.f2966cca.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.2279219a.js",
     "static/js/2.f2966cca.chunk.js",
     "static/css/main.55443a2f.chunk.css",
-    "static/js/main.8dccd2cc.chunk.js"
+    "static/js/main.9cf4f244.chunk.js"
   ]
 }

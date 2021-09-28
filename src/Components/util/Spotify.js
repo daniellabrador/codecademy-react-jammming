@@ -16,7 +16,8 @@ export const Spotify = {
     } else {
       const clientID = "f7827d17dafd4d18aee166e694d61941";
       const spotifyAuthorizeEndpoint = 'https://accounts.spotify.com/authorize'
-      const redirectURLAfterLogin = window.location.href.replaceAll('/', '%2F');
+      let redirectURLAfterLogin = window.location.href.replaceAll('/', '%2F');
+      redirectURLAfterLogin = redirectURLAfterLogin.replaceAll('-', '%2D');
   
       const scopes = ['playlist-modify-public']
       const spaceDelimiter = "%20"

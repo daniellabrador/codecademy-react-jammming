@@ -20,7 +20,7 @@ In this project, you will build a React web application called Jammming. You wil
 
 ## Setup
 
-To view the final output, click [here](https://daniellabrador.github.io/codecademy-react-jammming/).
+To view the final output, click [here](https://daniellabrador-jammming.netlify.app/).
 
 ## Sources
 
